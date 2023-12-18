@@ -1,7 +1,6 @@
-import React, { useEffect,useState } from 'react'
-import { Container, Typography, Checkbox, FormControlLabel, Box } from '@mui/material';
+import React, { useEffect} from 'react'
+import { Container, Checkbox, Box } from '@mui/material';
 import { useNavigate } from 'react-router';
-import { CheckBox } from '@mui/icons-material';
 
 const SuccessMsg = () => {
       const navigate = useNavigate();
@@ -10,13 +9,7 @@ const SuccessMsg = () => {
               navigate('/create-ad');
             }, 600);
   }, [navigate])
-
-  const [isChecked, setChecked] = useState(false);
-
-  const handleCheckboxChange = () => {
-    setChecked(!isChecked);
-  };
-  // 
+ 
   return (
 <Container maxWidth="sm" >
             <Box

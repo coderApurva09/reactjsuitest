@@ -1,16 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SortingOptions from './SortingOptions';
-import AdsInsights from './AdsInsights';
-import Navbar from './Navbar';
-import PieChartAndTable from './PieChartAndTable';
 import ToggleButtonTableChart from './ToggleButtonTableChart';
 import CampaignsTable from './CampaignsTable';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { AppBar, Tabs, Tab } from '@mui/material';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 
 import { Container,Grid} from '@mui/material';
@@ -38,9 +31,6 @@ const Dashboard = () => {
         <Tab label="" />
         <Tab label="" />
 
-        {/* <Tab label= "<HelpOutlineIcon/>" /> */}
-        {/* <Tab/><label><HelpOutlineIcon style={{color:'grey'}}/></label> */}
-        {/* Add more tabs as needed */}
       </Tabs>
     </AppBar>
     <Item><CampaignsTable />
@@ -52,11 +42,6 @@ const Dashboard = () => {
       <Tab label="Ads Insights" />
         <Tab label="" />
 
-        {/* <Tab label= "<HelpOutlineIcon/>" /> */}
-        {/* <Tab/><label style={{color:'grey'}}>Clicks ^</label>
-        <Tab/><label><HelpOutlineIcon style={{color:'grey'}}/></label> */}
-
-        {/* Add more tabs as needed */}
       </Tabs>
     </AppBar>
     <Item>
