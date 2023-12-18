@@ -1,39 +1,3 @@
-// import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-
-// const CreateAd = () => {
-//   const navigate = useNavigate();
-
-//   const redirectToFillData = () => {
-//     // Add logic to redirect based on checkboxes
-//     // For simplicity, let's assume it redirects to the Dashboard
-//     navigate('/');
-//   };
-
-//   const simulateFormSubmission = () => {
-//     // Simulate form submission
-
-//     // Wait for 0.6 seconds before redirecting
-//     setTimeout(() => {
-//       // Redirect to Create Ads Page
-//       navigate('/create-ad');
-//     }, 600);
-//   };
-
-//   return (
-//     <div>
-//       {/* Add form elements and checkboxes */}
-//       <button onClick={redirectToFillData}>Fill Data</button>
-
-//       {/* Display Ads Submitted message */}
-//       <div>Ads Submitted!</div>
-//     </div>
-//   );
-// };
-
-// export default CreateAd;
-
-
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -148,12 +112,10 @@ if(checked.textForm && checked.mediaForm){
   </Grid>
 
   </Grid>
-  <Grid item xs={3}>
-    <Item>
-
-            <Button variant="contained" onClick={navigateToForm}>Next</Button>
-</Item>
-</Grid>
+  <div style={{display:'flex',justifyContent:'flex-end', margin:'1em'}}>
+    <Button variant="contained" onClick={navigateToForm}>Next</Button>
+</div>
+{/* </Grid> */}
     </Box>
 
     </div>

@@ -83,7 +83,7 @@ const MediaForm = () => {
           <div>
             <div>
               <Label>Video URL</Label>
-              <input type='text' name="websiteUrl" value={formData.websiteUrl} onChange={handleChange} placeholder="Add a  URl of a video you want to use for the Ad" style={{ width: "95%", padding: '1em', margin: '1em', borderRadius: '0.4em' }} ></input>
+              <StyledInput3 type='text' name="websiteUrl" value={formData.websiteUrl} onChange={handleChange} placeholder="Add a  URl of landing page you want to redirect users to"  />
               {/* <StyledInput placeholder="Add a  URl of landing page you want to redirect users to" style={{width:"900px"}} /> */}
               <HelperText />
 
@@ -128,7 +128,7 @@ const MediaForm = () => {
 
           <div>
             <Label>Website URL</Label>
-            <input type='text' name="websiteUrl" value={formData.websiteUrl} onChange={handleChange} placeholder="Add a  URl of landing page you want to redirect users to" style={{ width: "95%", padding: '1em', margin: '1em', borderRadius: '0.4em' }} ></input>
+            <StyledInput3 type='text' name="websiteUrl" value={formData.websiteUrl} onChange={handleChange} placeholder="Add a  URl of landing page you want to redirect users to"  />
             {/* <StyledInput placeholder="Add a  URl of landing page you want to redirect users to" style={{width:"900px"}} /> */}
             <HelperText />
 
@@ -204,6 +204,36 @@ const StyledInput2 = styled(Input)(
   }
 `,
 );
+
+const StyledInput3 = styled(Input)(
+  ({ theme }) => `
+
+  .${inputClasses.input} {
+    width: 95%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
+    background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
+    border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[200]};
+    box-shadow: 0px 2px 2px ${theme.palette.mode === 'dark' ? grey[900] : grey[50]};
+
+    &:hover {
+      border-color: ${blue[400]};
+    }
+
+    &:focus {
+      outline: 0;
+      border-color: ${blue[400]};
+      box-shadow: 0 0 0 3px ${theme.palette.mode === 'dark' ? blue[600] : blue[200]};
+    }
+  }
+`,
+);
+
 
 const Label = styled(({ children, className }) => {
   const formControlContext = useFormControlContext();
