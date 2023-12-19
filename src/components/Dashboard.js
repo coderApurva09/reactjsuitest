@@ -6,7 +6,7 @@ import Paper from '@mui/material/Paper';
 import { AppBar, Tabs, Tab } from '@mui/material';
 
 
-import { Container,Grid} from '@mui/material';
+import { Grid} from '@mui/material';
 
 const Dashboard = () => {
     const Item = styled(Paper)(({ theme }) => ({
@@ -17,12 +17,8 @@ const Dashboard = () => {
         color: theme.palette.text.secondary,
       }));
   return (
-    <div style={{margin:"0.5em"}}>
-     
-
-      <Container style={{margin:"2em", display:'flex', flexWrap:'wrap', justifyContent:'center', alignItems:'center'}}>
       
-      <Grid container spacing={2}>
+      <Grid container spacing={2} margin={'0.5em'}>
       <Grid item xs={6}>
       <AppBar position="static" style={{backgroundColor:'#f0f0f0'}}>
       <Tabs  >
@@ -49,8 +45,7 @@ const Dashboard = () => {
 </Item>
   </Grid>
       </Grid>
-      </Container>
-    </div>
+      
   );
 };
 

@@ -15,7 +15,7 @@ import Stack from '@mui/material/Stack';
  import { useState } from 'react';
 
 
-const TextForm = () => {
+const TextForm = ({props}) => {
  const navigate = useNavigate();
 
  const [formData, setFormData] = useState({
@@ -39,7 +39,7 @@ const handleChange = (e) => {
  const handleSubmit = (e) => {
        e.preventDefault();
        navigate("/SuccessMsg")
-      //  console.log('Form submitted:', formData);
+        console.log('Form submitted:', formData);
      };
      const navigateToBack=()=>{
       navigate('/Create-ad')
@@ -52,40 +52,59 @@ const handleChange = (e) => {
        </Typography>
        <form onSubmit={handleSubmit}>
 
-      <FormControl defaultValue="" >
         <div style={{ display: 'flex', marging: '1em' }}>
 
           <div style={{ margin: '1em' }}>
             <Grid container spacing={2}>
               <Grid item xs={6}>
+              <FormControl defaultValue={formData.heading01} >
+
                 <Label>Heading 01</Label>
                 <StyledInput name="heading01" value={formData.heading01} onChange={handleChange} placeholder="Add a heading that would make users interested" />
                 <HelperText />
+                </FormControl>
+
               </Grid>
             </Grid>
+            <FormControl defaultValue={formData.heading02} >
+
             <Label>Heading 02 </Label>
             <StyledInput name="heading02" value={formData.heading02} onChange={handleChange} placeholder="Add a heading that would make users interested" />
             <HelperText />
+            </FormControl>
+            <FormControl defaultValue={formData.businessName} >
+
             <Label>Business Name</Label>
             <StyledInput name="businessName" value={formData.businessName} onChange={handleChange} placeholder="Add your Business Name" />
             <HelperText />
+            </FormControl>
+
           </div>
           <div style={{ margin: '1em' }}>
+          <FormControl defaultValue={formData.description01} >
+
             <label > Discription 01</label> <br></br>
             <Textarea aria-label="minimum height" name="description01" value={formData.description01} onChange={handleChange} minRows={5} placeholder="Add a primary text to help users understand more about your products, services & offers" />
 
             <HelperText />
+            </FormControl>
+            <FormControl defaultValue={formData.buttonLabel} >
+
             <Label>Button Label</Label>
             <StyledInput name="buttonLabel" value={formData.buttonLabel} onChange={handleChange} placeholder="Select a label that best suits your ad" />
             <HelperText />
+            </FormControl>
 
           </div>
         </div>
         <div>
+        <FormControl defaultValue={formData.websiteUrl} >
+
         <Label>Website URL</Label>
         <StyledInput3 type='text' name="websiteUrl" value={formData.websiteUrl} onChange={handleChange} placeholder="Add a  URl of landing page you want to redirect users to"  />
             {/* <StyledInput placeholder="Add a  URl of landing page you want to redirect users to" style={{width:"900px"}} /> */}
             <HelperText />
+            </FormControl>
 
         </div>
         <div style={{margin:'0.5em', padding:'0.3em', display:'flex',justifyContent:'flex-end'}}>
@@ -97,7 +116,6 @@ const handleChange = (e) => {
         </Stack>
 
         </div>
-      </FormControl>
       </form>
     </Container>
   );

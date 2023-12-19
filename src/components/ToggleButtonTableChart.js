@@ -18,10 +18,10 @@ const ToggleButtonTableChart = () => {
 
   return (
     
-    <Container maxWidth="sm" style={{width:"100%", height:"24em", }}>
+    <Container maxWidth="sm" style={{width:"100%", height:"27em", }}>
       {selectedValue === 'Piechart' && <PieChartAndTable />}
       {selectedValue === 'Table' && <TableToggle />}
-      <div style={{ display:'flex', justifyContent:"flex-end",margin:'1em', }}>
+      <div style={{ display:'flex', justifyContent:"flex-end",margin:'0.5em', }}>
       <ToggleButtonGroup
         value={selectedValue}
         exclusive

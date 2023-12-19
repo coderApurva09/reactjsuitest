@@ -18,7 +18,7 @@ const size = {
 
 export default function PieChartAndTable() {
   return (
-    <Container style={{margin:'3em'}}>
+    <Container style={{margin:'0.5em'}}>
     <PieChart series={[{ data, innerRadius: 50 }]} {...size}>
       {/* <PieCenterLabel>Center label</PieCenterLabel> */}
     </PieChart>
