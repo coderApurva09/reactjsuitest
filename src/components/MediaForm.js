@@ -22,6 +22,7 @@ const MediaForm = () => {
     heading01: '',
     heading02: '',
     description01: '',
+    videoUrl:'',
     businessName: '',
     landscapeImage:'',
     portraiteImage:'',
@@ -90,10 +91,10 @@ const MediaForm = () => {
           </div>
           <div>
             <div>
-            <FormControl defaultValue={formData.websiteUrl} >
+            <FormControl defaultValue={formData.videoUrl} >
 
               <Label>Video URL</Label>
-              <StyledInput3 type='text' name="websiteUrl" value={formData.websiteUrl} onChange={handleChange} placeholder="Add a  URl of landing page you want to redirect users to"  />
+              <StyledInput3 type='text' name="videoUrl" value={formData.videoUrl} onChange={handleChange} placeholder="Add a  URl of landing page you want to redirect users to"  />
               {/* <StyledInput placeholder="Add a  URl of landing page you want to redirect users to" style={{width:"900px"}} /> */}
               <HelperText />
 </FormControl>
@@ -123,7 +124,7 @@ const MediaForm = () => {
           <FormControl defaultValue={formData.SquareImage} >
 
             <Label>Square Marketing Image [1:1]</Label>
-            <StyledInput2 name="businessName" value={formData.SquareImage} onChange={handleChange} placeholder="Add a URl of the image you want to use for the ad" />
+            <StyledInput2 name="SquareImage" value={formData.SquareImage} onChange={handleChange} placeholder="Add a URl of the image you want to use for the ad" />
             {/* <StyledInput placeholder="Add a  URl of landing page you want to redirect users to" style={{width:"900px"}} /> */}
             <HelperText />
 </FormControl>
@@ -131,7 +132,7 @@ const MediaForm = () => {
           </div>
           <div style={{ display: "flex" }}>
             <div style={{margin:'1em'}}>
-            <FormControl defaultValue={formData.SquareImage} >
+            <FormControl defaultValue={formData.businessName} >
 
               <Label>Business Name</Label>
               <StyledInput name="businessName" value={formData.businessName} onChange={handleChange} placeholder="Add your Business Name" />
